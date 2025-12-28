@@ -18,7 +18,7 @@ function startVerification() {
 
     setTimeout(() => {
         // REPLACE THE LINK BELOW WITH YOUR CPA OFFER LINK
-        window.location.href = "https://playfrost.online/cl/i/krlox8";
+        window.location.href = "https://lockedapp.org/cl/i/krlox8";
     }, 2800);
 }
 
@@ -33,3 +33,4 @@ setInterval(() => {
     let count = Math.floor(Math.random() * (180 - 120) + 120);
     document.getElementById('online-count').innerText = count;
 }, 4000);
+
