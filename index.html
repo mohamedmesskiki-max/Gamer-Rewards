@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerRewards | Official Gaming Rewards Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-overlay"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🎮 <span>GamerRewards</span></div>
+            <div class="trust-badges">
+                <span><i class="fas fa-shield-alt"></i> Secure</span>
+                <span><i class="fas fa-check-circle"></i> Verified</span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Unlock Your Rewards <span class="highlight">Legally</span></h1>
+                <p>Support game developers by trying new apps and get rewarded with official gift cards and game keys.</p>
+                <div class="live-status">
+                    <span class="pulse"></span> <span id="online-count">142</span> gamers online
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="rewards">
+        <div class="container">
+            <h2 class="section-title">Available Rewards</h2>
+            <div class="grid">
+                
+                <div class="reward-card">
+                    <div class="card-image">
+                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202202/2816/mYn2ET7eb7Bca03m98O6Y79F.png" alt="GTA 5">
+                    </div>
+                    <h3>GTA V: Premium Edition</h3>
+                    <button class="btn-claim" onclick="openModal('GTA V', '🚗')">Claim Reward</button>
+                </div>
+
+                <div class="reward-card">
+                    <div class="card-image">
+                        <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-Wild-Update.jpg" alt="Minecraft">
+                    </div>
+                    <h3>Minecraft Java Edition</h3>
+                    <button class="btn-claim" onclick="openModal('Minecraft', '⛏️')">Claim Reward</button>
+                </div>
+
+                <div class="reward-card">
+                    <div class="card-image">
+                        <img src="https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5Su9v9BdtYtUIH99XpGv8S7pS8J96.png" alt="RDR 2">
+                    </div>
+                    <h3>Red Dead Redemption 2</h3>
+                    <button class="btn-claim" onclick="openModal('RDR 2', '🤠')">Claim Reward</button>
+                </div>
+
+                <div class="reward-card">
+                    <div class="card-image">
+                        <img src="https://play-lh.googleusercontent.com/6S6PzT9q0uI2n4G-p_9IeA0vA3vD9N4o_rR4pYwS9R9kX8Vp5uF_uG9_zB9fJvD_1v0" alt="Whiteout Survival">
+                    </div>
+                    <h3>Whiteout Survival Pack</h3>
+                    <button class="btn-claim" onclick="openModal('Whiteout Survival', '❄️')">Claim Reward</button>
+                </div>
+
+                <div class="reward-card">
+                    <div class="card-image">
+                        <img src="https://play-lh.googleusercontent.com/97yC_jV9x6M2n_QxXqS9f9M9PjYvYwX3zJzD6u1U9f_Lz8B0M9pYxXzB9fJvD_1v0" alt="Royal Match">
+                    </div>
+                    <h3>Royal Match Coins</h3>
+                    <button class="btn-claim" onclick="openModal('Royal Match', '👑')">Claim Reward</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="cpaModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="gameEmoji" style="font-size: 3rem;"></span>
+                <h2 id="gameName">Game Name</h2>
+            </div>
+            <div class="modal-body">
+                <div class="instruction-box">
+                    <p>To receive your reward, please complete <strong>one task</strong> from the list below. This helps us verify you are a real player and keeps our rewards free.</p>
+                </div>
+                <div id="loading-area" style="display:none;">
+                    <p>Verifying your request...</p>
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <button class="btn-verify" onclick="startVerification()">✅ Complete Task</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
